@@ -26,6 +26,7 @@ This algorithm as the name suggests counts on the features of its neighboring da
 In order to understand let's consider a example:  
 We are given two groups(A and B), where A consists of circles and B consists of squares.  
 Now a new data point as a triangle is introduced into the groups. So now we have to decide which group(A or B) the triangle belongs to.
+
 ![Picture1.png](attachment:Picture1.png)
 
 Let the value of ‘K’ which is the number of nearest neighbors be taken as 4, that is it will take 4 neighbors from the two groups which are closest to the triangle.  
@@ -41,6 +42,7 @@ The calculated Mean or median of continuous values which is  assigned to K Neare
 
 ## *How to select the value ok K in KNN- Algorithm:*
 There is no optimal number of neighbors that suits all kind of data sets since each dataset has their own requirements. In the case of a large number of neighbors it is computationally expensive and a small number of neighbors, the noise will have a higher influence on the result.
+
 ![knn.png](attachment:knn.png)
 
 In real life time scenarios, KNN is widely used as it does not make any underlying assumptions about the distributions of data. So it is non-parametric.
@@ -105,6 +107,7 @@ plt.xlabel('k Value')
 plt.ylabel('Error')
 plt.legend()
 ```
+
 ![error.png](attachment:error.png)
 
 #### *Step 3: Predict*
