@@ -141,6 +141,6 @@ Now that we have we have seen how KNN works, let us look into some of the practi
 * Recommending hotels and other accommodation facilities while you are travelling based on your previous bookings.
 * Some advanced examples could include handwriting detection (like OCR), image recognition and even video recognition.
 
-### *By : Kusupati Deekshitha , Subham Nandha*
+### *By : Kusupati Deekshitha , Subham Nanda*
  
   
