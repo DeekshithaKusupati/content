@@ -26,7 +26,7 @@
   * Underfitted models are usually easier to identify compared to overfitted ones as their behaviour can be seen while using training data set.
   
    Below is an illustration of the different ways a regression can potentially fit against unseen data:
-   ![knn.PNG](https://github.com/DeekshithaKusupati/Intern-Work/blob/main/int-ml-3/KNN/images/knn.png)
+   ![UNDERFITTING.PNG](https://github.com/DeekshithaKusupati/content/blob/main/UNDERFITTING.png)
    
 ## *How to avoid underfitting*
 Since we can detect underfitting while using the training set, we can assist in establishing accurate relationship between the input and target variables. we can avoid underfitting and make more accurate predictions by maintaining required complexity.
