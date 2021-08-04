@@ -25,9 +25,23 @@ his project helps
 * Recommend based on different modalities(User feedback, Text,Audio..etc).
 
 ## *Flow Chart*
-![Picture1.png](https://github.com/DeekshithaKusupati/Intern-Work/blob/main/int-ml-3/KNN/images/Picture1.png)
+![flowchart.png](https://github.com/DeekshithaKusupati/content/blob/main/flowchart.png)
 
-## *How does KNN work?*
+## *Ideas for Recommendation*
+
+#### *Popularity Based Recommender*
+* Songs sorted according to their popularity.
+* For each user, recommend the songs in order of  popularity, except those already in the user’s profile.
+* Non personalized Recommender.
+* Easy to implement.
+
+### *Personalized Recommenders*
+* Collaborative Filtering
+* Content Based Filtering
+
+#### *1.Collaborative Filtering*
+
+
 In order to understand let's consider a example:  
 We are given two groups(A and B), where A consists of circles and B consists of squares.  
 Now a new data point as a triangle is introduced into the groups. So now we have to decide which group(A or B) the triangle belongs to.
