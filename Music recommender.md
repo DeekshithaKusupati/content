@@ -38,48 +38,20 @@ his project helps
 ### *Personalized Recommenders*
 * Collaborative Filtering
 * Content Based Filtering
-![personalized recommender.png]()
+![personalized recommender.png](https://github.com/DeekshithaKusupati/content/blob/main/personalized%20recommender.png)
 
 #### *1.Collaborative Filtering*
+Item-item filtering approach involves defining a co-occurrence matrix based on a song a user likes. We are seeking to answer a question, for each song, what a number of time a user, who have listened to that song, will also listen to another set of other songs. To further simplify this, based on what you like in the past, what other similar song that you will like based on what other similar user have liked. Let’s apply this to our code. First we create an instance item similarity based recommender class and feed it with our training data.
+* Match people with similar interests as a basis for recommendation. 
+* User based collaborative recommendation model is designed.
+* Users who listen to the same songs in the past tend to have similar interests and will probably listen to the same songs in future.
 
-
-In order to understand let's consider a example:  
-We are given two groups(A and B), where A consists of circles and B consists of squares.  
-Now a new data point as a triangle is introduced into the groups. So now we have to decide which group(A or B) the triangle belongs to.
-
-![flowchart.png](https://github.com/DeekshithaKusupati/Intern-Work/blob/main/int-ml-3/KNN/images/Picture1.png)
-
-Let the value of ‘K’ which is the number of nearest neighbors be taken as 4, that is it will take 4 neighbors from the two groups which are closest to the triangle.  
-By using the Euclidean or Manhattan distance, we have to calculate the closeness or distance between the triangles and the 4 closest neighbors. 
-After finding the 4 neighbors, suppose we get 3 circles(i.e group A) and 1 square(i.e group B). This shows that the new datapoint(i.e triangle) will be classified into group A of circles. 
-
-![Picture2.png](https://github.com/DeekshithaKusupati/Intern-Work/blob/main/int-ml-3/KNN/images/Picture2.png)
-
-#### *KNN for Classification*
-A class label which is assigned to the majority of K Nearest Neighbors from the dataset is classified as a predicted class for the new data point.
-#### *KNN for Regression*
-The calculated Mean or median of continuous values which is  assigned to K Nearest Neighbors from dataset is the predicted continuous value for the new data point.
-
-## *How to select the value ok K in KNN- Algorithm:*
-There is no optimal number of neighbors that suits all kind of data sets since each dataset has their own requirements. In the case of a large number of neighbors it is computationally expensive and a small number of neighbors, the noise will have a higher influence on the result.
-
-![knn.PNG](https://github.com/DeekshithaKusupati/Intern-Work/blob/main/int-ml-3/KNN/images/knn.png)
-
-In real life time scenarios, KNN is widely used as it does not make any underlying assumptions about the distributions of data. So it is non-parametric.
-
-As K-NN algorithm makes highly accurate predictions it can be used for applications which require high accuracy. The quality of predictions is dependent on the distance measure. Thus, this algorithm is suitable for applications for which you have sufficient domain knowledge so that it can help you select an appropriate measure. Domain knowledge is very useful in choosing the K value.
-
-To select the right value of K for your data, we have to run the KNN algorithm several times with different values of K and select the K that reduces the number of errors .
-
-## *Advantages of KNN- Algorithm* 
-* It is easy to implement.
-* For noisy training data it is robust.
-* If the training data is large it can be more effective.
-
-## *Disadvantages of KNN- Algorithm* 
-* It may be complex some time as it always needs to determine the value of K .
-* Because of calculating the distance between the data points for all the training samples, the computation cost is high.
-* KNN works well with a small number of input variables, but struggles when the number of inputs is very large.
+#### *1.Content Based Filtering*
+Recommendations done using content-based recommenders can be seen as a user-specific classification problem. This classifier learns the user’s likes and dislikes from the features of the song.
+* Based on music description and user’s preference profile.
+* Not based on choices of other users with similar interests.
+* We make recommendations by looking for music whose features are very similar to the tastes of the user.
+* Majority of songs have too few listeners, so difficult to “collaborate”. So we can use content based filtering.
 
 ## *Python Implementation*
 Implementation of the K Nearest Neighbor algorithm using Python’s scikit-learn library:
