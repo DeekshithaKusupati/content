@@ -38,6 +38,7 @@ his project helps
 ### *Personalized Recommenders*
 * Collaborative Filtering
 * Content Based Filtering
+![personalized recommender.png]()
 
 #### *1.Collaborative Filtering*
 
