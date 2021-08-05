@@ -46,7 +46,7 @@ Item-item filtering approach involves defining a co-occurrence matrix based on a
 * User based collaborative recommendation model is designed.
 * Users who listen to the same songs in the past tend to have similar interests and will probably listen to the same songs in future.
 
-#### *1.Content Based Filtering*
+#### *2.Content Based Filtering*
 Recommendations done using content-based recommenders can be seen as a user-specific classification problem. This classifier learns the user’s likes and dislikes from the features of the song.
 * Based on music description and user’s preference profile.
 * Not based on choices of other users with similar interests.
