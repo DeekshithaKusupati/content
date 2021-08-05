@@ -53,85 +53,18 @@ Recommendations done using content-based recommenders can be seen as a user-spec
 * We make recommendations by looking for music whose features are very similar to the tastes of the user.
 * Majority of songs have too few listeners, so difficult to “collaborate”. So we can use content based filtering.
 
-## *Python Implementation*
-Implementation of the K Nearest Neighbor algorithm using Python’s scikit-learn library:
-#### *Step 1: Get and prepare data*
-```python
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.datasets import make_classification
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.neighbors import KNeighborsClassifier 
-from sklearn import metrics   
-```
-After loading important libraries, we create our data using sklearn.datasets with 200 samples, 8 features, and 2 classes. Then data is split into the train(80%) and test(20%) data and scaled using StandardScaler.
-```python
-X,Y=make_classification(n_samples= 200,n_features=8,n_informative=8,n_redundant=0,n_repeated=0,n_classes=2,random_state=14)
-X_train, X_test, y_train, y_test= train_test_split(X, Y, test_size= 0.2,random_state=32)
-sc= StandardScaler()
-sc.fit(X_train)
-X_train= sc.transform(X_train)
-sc.fit(X_test)
-X_test= sc.transform(X_test)
-X.shape
-```
-```python
-output = (200, 8)
- ```
- #### *Step 2: Find the value for K*
- For choosing the K value, we use error curves and K value with optimal variance, and bias error is chosen as K value for prediction purposes. With the error curve plotted below, we choose K=7 for the prediction
- ```python
-error1= []
-error2= []
-for k in range(1,15):
-    knn= KNeighborsClassifier(n_neighbors=k)
-    knn.fit(X_train,y_train)
-    y_pred1= knn.predict(X_train)
-    error1.append(np.mean(y_train!= y_pred1))
-    y_pred2= knn.predict(X_test)
-    error2.append(np.mean(y_test!= y_pred2))
-# plt.figure(figsize(10,5))
-plt.plot(range(1,15),error1,label="train")
-plt.plot(range(1,15),error2,label="test")
-plt.xlabel('k Value')
-plt.ylabel('Error')
-plt.legend()
-```
+## This repo is divided into the following two packages that contains the following files:
 
-![error.png](https://github.com/DeekshithaKusupati/Intern-Work/blob/main/int-ml-3/KNN/images/error.png)
+#### I. Content-based recommendation system:
 
-#### *Step 3: Predict*
-In step 2, we have chosen the K value to be 7. Now we substitute that value and get the accuracy score = 0.9 for the test data.
-```python
-knn= KNeighborsClassifier(n_neighbors=7)
-knn.fit(X_train,y_train)
-y_pred= knn.predict(X_test)
-metrics.accuracy_score(y_test,y_pred)
-```
-```python
-output = 0.9
-```
-## *Pseudocode for K Nearest Neighbor (classification)* 
-This is pseudocode for implementing the KNN algorithm from scratch:
+a. A jupyter notebook named ```content_based_music_recommender``` that contains the code and analysis for the recommedation system.
+b. A CSV file named ```abcdata``` and ```song_data``` containing the data for the songs used in the system.
 
-1. Load the training data.
-2. Prepare data by scaling, missing value treatment, and dimensionality reduction as required.
-3. Find the optimal value for K:
-4. Predict a class value for new data:
-    * Calculate distance(X, Xi) from i=1,2,3,….,n.  
-      where X= new data point, Xi= training data, distance as per your chosen distance metric.
-    * Sort these distances in increasing order with corresponding train data.
-    * From this sorted list, select the top ‘K’ rows.
-    * Find the most frequent class from these chosen ‘K’ rows. This will be your predicted class.
-   
-## *Practical Applications of K-NN*
-Now that we have we have seen how KNN works, let us look into some of the practical applications of KNN.
+#### II. Collaborative recommendation system:
 
-* Recommending products to people with similar interests, recommending movies and TV shows as per viewer’s choice and interest.
-* Recommending hotels and other accommodation facilities while you are travelling based on your previous bookings.
-* Some advanced examples could include handwriting detection (like OCR), image recognition and even video recognition.
+a. A jupyter notebook named ```collaborative_based_music_recommender``` that contains the code and analysis for the recommedation system.
+b. A CSV file named ```song_data``` containing the data for the songs used in the system.
+
 
 ### *By : Kusupati Deekshitha , Subham Nanda*
  
