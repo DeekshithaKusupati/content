@@ -29,13 +29,13 @@ his project helps
 
 ## *Ideas for Recommendation*
 
-#### *Popularity Based Recommender*
+#### *I.Popularity Based Recommender*
 * Songs sorted according to their popularity.
 * For each user, recommend the songs in order of  popularity, except those already in the user’s profile.
 * Non personalized Recommender.
 * Easy to implement.
 
-### *Personalized Recommenders*
+#### *II.Personalized Recommenders*
 * Collaborative Filtering
 * Content Based Filtering
 ![personalized recommender.png](https://github.com/DeekshithaKusupati/content/blob/main/personalized%20recommender.png)
