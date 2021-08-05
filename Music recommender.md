@@ -53,6 +53,8 @@ Recommendations done using content-based recommenders can be seen as a user-spec
 * We make recommendations by looking for music whose features are very similar to the tastes of the user.
 * Majority of songs have too few listeners, so difficult to “collaborate”. So we can use content based filtering.
 
+## *Implementation*
+
 ### This repo is divided into the following two packages that contains the following files:
 
 #### I. Content-based recommendation system:
